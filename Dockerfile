@@ -14,6 +14,8 @@ apt install -y git
 
 RUN apt install -y curl
 
+RUN curl -LsSf https://astral.sh/uv/install.sh | sh
+
 RUN curl -OL ${GO_URL} && \
     rm -rf /usr/local/go && \
     tar -C /usr/local -xzf ${GO_VERSION}.linux-amd64.tar.gz
