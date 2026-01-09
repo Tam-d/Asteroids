@@ -14,7 +14,7 @@ apt install -y git
 
 RUN apt install -y curl
 
-RUN apt install jq
+RUN apt install -y jq
 
 RUN curl -LsSf https://astral.sh/uv/install.sh | sh
 
