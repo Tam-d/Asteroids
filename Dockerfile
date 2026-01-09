@@ -14,6 +14,8 @@ apt install -y git
 
 RUN apt install -y curl
 
+RUN apt install jq
+
 RUN curl -LsSf https://astral.sh/uv/install.sh | sh
 
 RUN curl -OL ${GO_URL} && \
