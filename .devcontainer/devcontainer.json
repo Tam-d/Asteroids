@@ -4,6 +4,12 @@
     "build": {
         "dockerfile": "../Dockerfile"
     },
+
+    "runArgs": [
+        "--env=DISPLAY=${env:DISPLAY}",
+        "--volume=/tmp/.X11-unix:/tmp/.X11-unix:rw",
+        "--shm-size=1gb"
+    ],
     
     "customizations": {
         "vscode": {
