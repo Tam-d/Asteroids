@@ -1,4 +1,7 @@
 import pygame
+
+from player import Player
+
 from constants import SCREEN_WIDTH, SCREEN_HEIGHT
 from logger import log_state
 
@@ -11,6 +14,11 @@ def main():
     pygame.init()
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 
+    player = Player(
+        x = SCREEN_WIDTH / 2,
+        y = SCREEN_HEIGHT / 2
+    )
+
     game_clock = pygame.time.Clock()
     delta_time = 0
 
@@ -22,6 +30,7 @@ def main():
                 return
 
         screen.fill("black")
+        player.draw(screen)
         pygame.display.flip()
 
         delta_time += game_clock.tick(60) /1000
